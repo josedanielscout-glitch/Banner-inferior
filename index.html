@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner Pastoral Innovador</title>
+    <title>Banner Pastoral Final</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -54,13 +54,12 @@
             z-index: 1;
         }
 
-        /* Borde degradado al hover */
         .glass-card::before {
             content: "";
             position: absolute;
             inset: 0;
             border-radius: inherit;
-            padding: 2px; /* Grosor del borde */
+            padding: 2px;
             background: linear-gradient(45deg, var(--color-start), var(--color-end));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -75,14 +74,8 @@
             box-shadow: 0 10px 25px -5px rgba(var(--shadow-rgb), 0.15), 0 8px 10px -6px rgba(var(--shadow-rgb), 0.1);
         }
 
-        .glass-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Animación del Icono */
-        .glass-card:hover i {
-            animation: bounce-rotate 0.6s ease;
-        }
+        .glass-card:hover::before { opacity: 1; }
+        .glass-card:hover i { animation: bounce-rotate 0.6s ease; }
 
         @keyframes bounce-rotate {
             0% { transform: scale(1); }
@@ -90,29 +83,16 @@
             100% { transform: scale(1) rotate(0deg); }
         }
 
-        /* --- Tipografía --- */
         .font-outfit { font-family: 'Outfit', sans-serif; }
         
-        .title-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #db2777 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine-text 5s linear infinite;
-        }
-
-        @keyframes shine-text {
-            to { background-position: 200% center; }
-        }
-
-        /* Onda SVG decorativa superior */
+        /* Onda SVG */
         .wave-separator {
             position: absolute;
             top: -25px;
             left: 0;
             width: 100%;
             height: 26px;
-            fill: rgba(255,255,255,0.8); /* Coincide con el inicio del gradiente o blanco */
+            fill: rgba(255,255,255,0.8);
             z-index: 10;
         }
     </style>
@@ -122,7 +102,6 @@
     <!-- INICIO FOOTER -->
     <footer class="footer-bg relative w-full pt-4 pb-6 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.05)] border-t border-white/50">
         
-        <!-- Onda decorativa para romper la línea recta -->
         <svg class="wave-separator" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff" fill-opacity="0.4"></path>
         </svg>
@@ -130,153 +109,98 @@
         <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-20">
             <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
                 
-                <!-- IZQUIERDA: Redes Sociales (Reorganizado y limpio) -->
+                <!-- IZQUIERDA: Redes Sociales y Web -->
                 <div class="w-full lg:w-auto flex flex-col items-center justify-center lg:mr-4">
                     <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-3 opacity-60">Síguenos</span>
                     
                     <div class="flex lg:flex-col gap-4">
-                        <!-- Facebook -->
+                        <!-- WEB -->
+                        <a href="https://ucn.edu.co/virtualmente" target="_blank" class="relative w-11 h-11 flex items-center justify-center rounded-full bg-white text-blue-500 shadow-sm hover:shadow-blue-200/50 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 group overflow-hidden" title="Virtualmente">
+                            <span class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <i class="fas fa-globe text-lg relative z-10 group-hover:text-white transition-colors"></i>
+                        </a>
+
+                        <!-- FACEBOOK -->
                         <a href="https://www.facebook.com/bienestarucn" target="_blank" class="relative w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#1877F2] shadow-sm hover:shadow-blue-200/50 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 group overflow-hidden" title="Facebook">
                             <span class="absolute inset-0 bg-[#1877F2] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                             <i class="fab fa-facebook-f text-lg relative z-10 group-hover:text-white transition-colors"></i>
                         </a>
                         
-                        <!-- Instagram -->
+                        <!-- INSTAGRAM -->
                         <a href="https://www.instagram.com/pastoralybienestarucn/" target="_blank" class="relative w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#E4405F] shadow-sm hover:shadow-pink-200/50 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 group overflow-hidden" title="Instagram">
                             <span class="absolute inset-0 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                             <i class="fab fa-instagram text-lg relative z-10 group-hover:text-white transition-colors"></i>
                         </a>
+
+                        <!-- YOUTUBE -->
+                        <a href="https://www.youtube.com/@pastoralybienestar_UCN" target="_blank" class="relative w-11 h-11 flex items-center justify-center rounded-full bg-white text-[#FF0000] shadow-sm hover:shadow-red-200/50 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 group overflow-hidden" title="YouTube">
+                            <span class="absolute inset-0 bg-[#FF0000] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <i class="fab fa-youtube text-lg relative z-10 group-hover:text-white transition-colors"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- DERECHA: Ecosistema de Grupos (Ahora ocupa más espacio) -->
+                <!-- DERECHA: Ecosistema de Grupos (Todas las tarjetas) -->
                 <div class="w-full lg:flex-1">
                     <div class="flex items-center justify-between mb-3 px-2">
                         <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Ecosistema Digital
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Grupos de WhatsApp
                         </span>
                         <span class="text-[10px] text-gray-400 italic hidden sm:block">Clic para unirte</span>
                     </div>
 
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        
                         <!-- Card 1: Comunidad -->
-                        <a href="https://chat.whatsapp.com/DL0FLKG1ZSw4ik94wafznF" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #3b82f6; --color-end: #60a5fa; --shadow-rgb: 59, 130, 246;">
-                            <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-users text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Comunidad</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Global UCN</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/DL0FLKG1ZSw4ik94wafznF" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #3b82f6; --color-end: #60a5fa; --shadow-rgb: 59, 130, 246;">
+                            <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center shadow-inner group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-users text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Comunidad P&B- UCN</span><span class="text-[9px] text-gray-400 font-medium">Información y eventos</span></div>
                         </a>
-
                         <!-- Card 2: Espiritual -->
-                        <a href="https://chat.whatsapp.com/GlKBNbj1b7iH5m13VJ1NYR" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #6366f1; --color-end: #818cf8; --shadow-rgb: 99, 102, 241;">
-                            <div class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-500 flex items-center justify-center shadow-inner group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-church text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-indigo-600 transition-colors">Espiritual</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Interioridad</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/GlKBNbj1b7iH5m13VJ1NYR" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #6366f1; --color-end: #818cf8; --shadow-rgb: 99, 102, 241;">
+                            <div class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-500 flex items-center justify-center shadow-inner group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-church text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-indigo-600 transition-colors">Espiritual</span><span class="text-[9px] text-gray-400 font-medium">Espiritualidad</span></div>
                         </a>
-
                         <!-- Card 3: Psicoafectiva -->
-                        <a href="https://chat.whatsapp.com/BF5xqFyHL9x4lQHGCNhMQp" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #ec4899; --color-end: #f472b6; --shadow-rgb: 236, 72, 153;">
-                            <div class="w-9 h-9 rounded-xl bg-pink-50 text-pink-500 flex items-center justify-center shadow-inner group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-heart text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-pink-600 transition-colors">Psicoafectiva</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Te escuchamos</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/BF5xqFyHL9x4lQHGCNhMQp" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #ec4899; --color-end: #f472b6; --shadow-rgb: 236, 72, 153;">
+                            <div class="w-9 h-9 rounded-xl bg-pink-50 text-pink-500 flex items-center justify-center shadow-inner group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-heart text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-pink-600 transition-colors">Psicoafectiva</span><span class="text-[9px] text-gray-400 font-medium">Salud mental</span></div>
                         </a>
-
                         <!-- Card 4: Arte -->
-                        <a href="https://chat.whatsapp.com/CY7Mtlabmkj0qQJXxniiUF" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #f97316; --color-end: #fb923c; --shadow-rgb: 249, 115, 22;">
-                            <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center shadow-inner group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-palette text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-orange-600 transition-colors">Arte y Cultura</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Exprésate</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/CY7Mtlabmkj0qQJXxniiUF" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #f97316; --color-end: #fb923c; --shadow-rgb: 249, 115, 22;">
+                            <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center shadow-inner group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-palette text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-orange-600 transition-colors">Arte y Cultura</span><span class="text-[9px] text-gray-400 font-medium">Exprésate</span></div>
                         </a>
-
                         <!-- Card 5: Ecología -->
-                        <a href="https://chat.whatsapp.com/LM9mW7wZSWBIjUFgpBVAwg" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #16a34a; --color-end: #4ade80; --shadow-rgb: 22, 163, 74;">
-                            <div class="w-9 h-9 rounded-xl bg-green-50 text-green-500 flex items-center justify-center shadow-inner group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-leaf text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-green-600 transition-colors">Ecología</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Sostenible</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/LM9mW7wZSWBIjUFgpBVAwg" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #16a34a; --color-end: #4ade80; --shadow-rgb: 22, 163, 74;">
+                            <div class="w-9 h-9 rounded-xl bg-green-50 text-green-500 flex items-center justify-center shadow-inner group-hover:bg-green-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-leaf text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-green-600 transition-colors">Ecología</span><span class="text-[9px] text-gray-400 font-medium">Sostenibilidad</span></div>
                         </a>
-
                         <!-- Card 6: Palabras -->
-                        <a href="https://chat.whatsapp.com/Jt1UTbMe6xGKBNPTZcrOuF" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #0d9488; --color-end: #2dd4bf; --shadow-rgb: 13, 148, 136;">
-                            <div class="w-9 h-9 rounded-xl bg-teal-50 text-teal-500 flex items-center justify-center shadow-inner group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-feather-alt text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-teal-600 transition-colors">Club Palabras</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Literatura</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/Jt1UTbMe6xGKBNPTZcrOuF" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #0d9488; --color-end: #2dd4bf; --shadow-rgb: 13, 148, 136;">
+                            <div class="w-9 h-9 rounded-xl bg-teal-50 text-teal-500 flex items-center justify-center shadow-inner group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-feather-alt text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-teal-600 transition-colors">Club de las Palabras</span><span class="text-[9px] text-gray-400 font-medium">Literatura</span></div>
                         </a>
-
                         <!-- Card 7: Deportes -->
-                        <a href="https://chat.whatsapp.com/CfH9QSzScYVFH46As5G6Lp" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #ef4444; --color-end: #f87171; --shadow-rgb: 239, 68, 68;">
-                            <div class="w-9 h-9 rounded-xl bg-red-50 text-red-500 flex items-center justify-center shadow-inner group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-medal text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-red-600 transition-colors">Deportes</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Actívate</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/CfH9QSzScYVFH46As5G6Lp" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #ef4444; --color-end: #f87171; --shadow-rgb: 239, 68, 68;">
+                            <div class="w-9 h-9 rounded-xl bg-red-50 text-red-500 flex items-center justify-center shadow-inner group-hover:bg-red-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-medal text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-red-600 transition-colors">Deportes UCN</span><span class="text-[9px] text-gray-400 font-medium">Actívate</span></div>
                         </a>
-
                         <!-- Card 8: Voluntarios -->
-                        <a href="https://chat.whatsapp.com/GqI0D4PAfQC9zCStZFM6X3" target="_blank" 
-                           class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group"
-                           style="--color-start: #eab308; --color-end: #facc15; --shadow-rgb: 234, 179, 8;">
-                            <div class="w-9 h-9 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center shadow-inner group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
-                                <i class="fas fa-hand-sparkles text-sm"></i>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-xs font-bold text-gray-700 group-hover:text-yellow-600 transition-colors">Voluntarios</span>
-                                <span class="text-[9px] text-gray-400 font-medium">Ayudamos</span>
-                            </div>
+                        <a href="https://chat.whatsapp.com/GqI0D4PAfQC9zCStZFM6X3" target="_blank" class="glass-card rounded-2xl p-2.5 flex items-center gap-3 group" style="--color-start: #eab308; --color-end: #facc15; --shadow-rgb: 234, 179, 8;">
+                            <div class="w-9 h-9 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center shadow-inner group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300"><i class="fas fa-hand-sparkles text-sm"></i></div>
+                            <div class="flex flex-col"><span class="text-xs font-bold text-gray-700 group-hover:text-yellow-600 transition-colors">Voluntarios</span><span class="text-[9px] text-gray-400 font-medium">Servicio</span></div>
                         </a>
-
                     </div>
                 </div>
-
             </div>
             
             <!-- Pie de texto minimalista -->
             <div class="mt-5 text-center border-t border-gray-200/50 pt-3">
                  <p class="text-[10px] text-gray-400 font-medium tracking-wide">
-                    PASTORAL Y BIENESTAR INSTITUCIONAL UCN &copy; 2024
+                    PASTORAL Y BIENESTAR INSTITUCIONAL UCN &copy; 2026
                 </p>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
